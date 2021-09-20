@@ -1612,3 +1612,27 @@
 //
 //     return string.trim().replace(/\szero/g, '')
 // }
+
+// Find primes in range (complexity matters)
+//Find all primes between 1 and n
+
+const isPrime =(num) =>  {
+    for (let i = 2; i<= Math.sqrt(num); i++){
+        if(num % i === 0){
+            return false
+        }
+    }
+    return num > 1
+}
+const primeList = (num) =>  {
+    let nums = []
+    for (let i = 2; i <= num; i++){
+        if(isPrime(i)){
+            nums.push(i)
+        }
+    }
+    if(num === 1 || num === 0){
+        return []
+    }
+    return nums
+}
