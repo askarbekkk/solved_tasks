@@ -1639,18 +1639,44 @@
 
 
 
-function billboard(name, price = 30){
-    let res = 0
-    name = name.split('')
-
-return  name.map(el => el = price).reduce((a,b) => a +b)
-
-
-}
-
-console.log(billboard('askar'))
+// function billboard(name, price = 30){
+//     let res = 0
+//     name = name.split('')
+//
+// return  name.map(el => el = price).reduce((a,b) => a +b)
+//
+//
+// }
+//
+// console.log(billboard('askar'))
 
 // 0
 // ''
 // undefined
 // '0'
+
+
+// 100 20 50 5 1
+// 378
+// [100,100,100,50,20,5,1,1,1]
+
+
+// function bankomat(sum){
+//     let banknotes = [ 100,50,20,5,1]
+// let result = []
+//
+// for(let i = 0; i < banknotes.length; i++ ) {
+//     let note = Math.floor(sum / banknotes[i])
+//     sum %= banknotes[i]
+//     let newArr = Array(note).fill(banknotes[i])
+//     result = [...result, ...newArr]
+//
+// }
+// return result
+// }
+//
+// console.log(bankomat(378))
+
+var FilterString = function(value) {
+    return +value.split('').filter(n => !isNaN(n)).join('');
+}
